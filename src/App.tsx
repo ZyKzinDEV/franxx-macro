@@ -11,7 +11,7 @@ export default function App() {
       setIsDownloading(false);
       
       const a = document.createElement("a");
-      a.href = "/franxx-macro.zip";
+      a.href = "./franxx-macro.zip";
       a.download = "franxx-macro.zip";
       document.body.appendChild(a);
       a.click();
@@ -34,7 +34,7 @@ export default function App() {
           <div className="flex items-center gap-3">
             <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-red-500/50 shadow-[0_0_15px_rgba(239,68,68,0.4)] bg-black flex items-center justify-center">
               <img 
-                src="/logo.png" 
+                src="./logo.png" 
                 alt="Franxx Logo" 
                 className="w-full h-full object-cover object-top filter brightness-110"
                 onError={(e) => {
@@ -138,7 +138,7 @@ export default function App() {
               className="relative z-20 flex flex-col items-center justify-end w-full h-full pointer-events-none"
             >
               <img 
-                src="/zero-two.png"
+                src="./zero-two.png"
                 alt="Zero Two"
                 className="w-full max-w-[350px] lg:max-w-[500px] xl:max-w-[600px] object-contain filter brightness-[1.05] contrast-[1.1] origin-bottom"
                 style={{
