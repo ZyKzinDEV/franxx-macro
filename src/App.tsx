@@ -140,7 +140,7 @@ export default function App() {
               <img 
                 src="./zero-two.png"
                 alt="Zero Two"
-                className="w-full max-w-[350px] lg:max-w-[500px] xl:max-w-[600px] object-contain filter brightness-[1.05] contrast-[1.1] origin-bottom"
+                className="w-full max-w-[600px] md:max-w-[800px] lg:max-w-[1000px] xl:max-w-[1200px] object-contain filter brightness-[1.05] contrast-[1.1] origin-bottom scale-[1.3]"
                 style={{
                   maskImage: 'linear-gradient(to top, transparent 0%, black 15%, black 100%)',
                   WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 15%, black 100%)'
