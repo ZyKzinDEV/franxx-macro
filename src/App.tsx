@@ -24,8 +24,8 @@ export default function App() {
     <div className="min-h-screen bg-black text-white font-sans overflow-x-hidden selection:bg-red-500/30">
       
       {/* Global Ambient Glow */}
-      <div className="fixed top-[-20%] left-[-10%] w-[60%] h-[60%] bg-red-600/5 blur-[150px] rounded-full pointer-events-none z-0"></div>
-      <div className="fixed bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-red-900/10 blur-[150px] rounded-full pointer-events-none z-0"></div>
+      <div className="fixed top-[-20%] left-[-10%] w-[60%] h-[60%] bg-zinc-900/30 blur-[150px] rounded-full pointer-events-none z-0"></div>
+      <div className="fixed bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-zinc-900/30 blur-[150px] rounded-full pointer-events-none z-0"></div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         
@@ -130,7 +130,7 @@ export default function App() {
           {/* Right Hero / Floating Image */}
           <div className="flex-1 relative flex items-end justify-center w-full min-h-[400px] lg:min-h-[500px] lg:-mr-10 xl:-mr-20 mt-12 lg:mt-0">
             {/* Deep ambient red glow in center */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[120%] bg-red-600/20 blur-[130px] rounded-[100%] pointer-events-none"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[120%] bg-zinc-900/50 blur-[130px] rounded-[100%] pointer-events-none"></div>
 
             <motion.div 
               animate={{ y: [-15, 15, -15] }}
@@ -140,7 +140,7 @@ export default function App() {
               <img 
                 src="./zero-two.png"
                 alt="Zero Two"
-                className="w-full max-w-[600px] md:max-w-[800px] lg:max-w-[1000px] xl:max-w-[1200px] object-contain filter brightness-[1.05] contrast-[1.1] origin-bottom scale-[1.3]"
+                className="w-full max-w-[350px] md:max-w-[450px] lg:max-w-[550px] xl:max-w-[650px] object-contain filter brightness-90 contrast-[1.1] grayscale-[0.2] origin-bottom"
                 style={{
                   maskImage: 'linear-gradient(to top, transparent 0%, black 15%, black 100%)',
                   WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 15%, black 100%)'
@@ -261,7 +261,7 @@ export default function App() {
 
         {/* Content Section: Final CTA */}
         <section id="about" className="py-24 border-t border-zinc-900/50 flex flex-col items-center justify-center text-center relative z-10 w-full">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-red-600/10 via-transparent to-transparent blur-[80px] pointer-events-none"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-800/10 via-transparent to-transparent blur-[80px] pointer-events-none"></div>
           <h2 className="text-5xl md:text-6xl font-black mb-6 tracking-tight relative z-20">READY TO <span className="text-red-500">DOMINATE?</span></h2>
           <p className="text-zinc-400 text-lg md:text-xl mb-10 max-w-2xl font-light leading-relaxed relative z-20">
             Join thousands of players already using Franxx Macro to secure their victories. Download now and experience true visual automation.
