@@ -78,7 +78,7 @@ export default function App() {
               transition={{ delay: 0.1 }}
               className="text-zinc-400 text-xl md:text-2xl mb-12 leading-relaxed font-light"
             >
-              Dominate the server with automated precision and zero latency. A purely visual macro that relies entirely on pixel scanning. Simple, dark, and flawlessly efficient.
+              Dominate the server with automated precision and zero latency. A powerful external macro designed for fast, precise and reliable automation across games, with special optimization for Blade Ball. Built for speed, simplicity, and consistency — helping you react faster without unnecessary complexity.
             </motion.p>
 
             {/* Hero Feature Tags */}
@@ -161,7 +161,7 @@ export default function App() {
         <section id="features" className="py-24 border-t border-zinc-900/50 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black mb-4 tracking-tight">PRECISION <span className="text-red-500">AUTOMATION</span></h2>
-            <p className="text-zinc-400 text-lg max-w-2xl mx-auto font-light leading-relaxed">Built from the ground up in C++ for incredibly fast screen capture and hardware-level automation.</p>
+            <p className="text-zinc-400 text-lg max-w-2xl mx-auto font-light leading-relaxed">Built for high-speed screen capture and efficient input automation.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -170,9 +170,9 @@ export default function App() {
               <div className="w-12 h-12 bg-red-950/30 border border-red-500/20 rounded-xl flex items-center justify-center mb-6 shadow-[0_0_15px_rgba(239,68,68,0.1)]">
                 <Activity className="w-6 h-6 text-red-500" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-white tracking-wide">Visual Pixel Scanning</h3>
+              <h3 className="text-xl font-bold mb-3 text-white tracking-wide">Fast Input Execution</h3>
               <p className="text-zinc-400 leading-relaxed font-light">
-                Ultra-fast screen capture technology monitors specific color triggers on your screen, instantly automating your keystrokes at the exact millisecond.
+                The macro is designed to trigger actions with extremely low delay, ensuring quick and consistent reactions during gameplay.
               </p>
             </div>
             
@@ -183,7 +183,7 @@ export default function App() {
               </div>
               <h3 className="text-xl font-bold mb-3 text-white tracking-wide">Safe & External</h3>
               <p className="text-zinc-400 leading-relaxed font-light">
-                Operates entirely outside of the game client. Franxx never reads or modifies game memory, functioning purely as an external visual macro tool.
+                Operates entirely outside of the game client. Franxx never reads or modifies game memory, functioning purely as an external macro tool.
               </p>
             </div>
 
