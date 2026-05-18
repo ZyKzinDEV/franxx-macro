@@ -200,6 +200,65 @@ export default function App() {
           </div>
         </section>
 
+        {/* Content Section: Updates */}
+        <section id="updates" className="py-24 border-t border-zinc-900/50 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-black mb-4 tracking-tight">LATEST <span className="text-red-500">UPDATES</span></h2>
+            <p className="text-zinc-400 text-lg max-w-2xl mx-auto font-light leading-relaxed">Stay informed about the newest features and improvements.</p>
+          </div>
+
+          <div className="max-w-3xl mx-auto space-y-6">
+            {/* Update Item 1 */}
+            <div className="bg-zinc-950/50 border border-zinc-900 p-6 sm:p-8 rounded-3xl relative overflow-hidden transition-colors hover:border-red-900/50">
+              <div className="absolute top-0 left-0 w-1 h-full bg-red-500"></div>
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-4">
+                <div className="flex items-center gap-3">
+                  <Terminal className="w-5 h-5 text-red-500" />
+                  <h3 className="text-xl font-bold text-white tracking-wide">Version 1.0.5</h3>
+                </div>
+                <span className="text-sm font-medium px-3 py-1 bg-red-950/30 text-red-400 rounded-full border border-red-500/20 max-w-fit">May 18, 2026</span>
+              </div>
+              <ul className="space-y-3 text-zinc-400 font-light mt-6">
+                <li className="flex gap-3">
+                  <Check className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
+                  <span>Official Launch</span>
+                </li>
+                <li className="flex gap-3">
+                  <Check className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
+                  <span>Fix crashes and lagging</span>
+                </li>
+                  <li className="flex gap-3">
+                  <Check className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
+                  <span>Significantly improved macro performance.</span>
+                </li>
+              </ul>
+            </div>
+            
+            {/* Update Item 2 */}
+            <div className="bg-zinc-950/50 border border-zinc-900 p-6 sm:p-8 rounded-3xl relative overflow-hidden transition-colors hover:border-red-900/50">
+              <div className="absolute top-0 left-0 w-1 h-full bg-zinc-700"></div>
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-4">
+                <div className="flex items-center gap-3">
+                  <Terminal className="w-5 h-5 text-zinc-500" />
+                  <h3 className="text-xl font-bold text-zinc-300 tracking-wide">Version 1.0.0</h3>
+                </div>
+                <span className="text-sm font-medium px-3 py-1 bg-zinc-900 text-zinc-500 rounded-full border border-zinc-800 max-w-fit">Apr 10, 2026</span>
+              </div>
+              <ul className="space-y-3 text-zinc-400 font-light mt-6">
+                <li className="flex gap-3">
+                  <Check className="w-5 h-5 text-zinc-600 shrink-0 mt-0.5" />
+                  <span>Minor bug fixes and UI improvements in the main dashboard.</span>
+                </li>
+                <li className="flex gap-3">
+                  <Check className="w-5 h-5 text-zinc-600 shrink-0 mt-0.5" />
+                  <span>Click delay fixed</span>
+                </li>
+              </ul>
+            </div>
+            
+          </div>
+        </section>
+
         {/* Content Section: Final CTA */}
         <section id="about" className="py-24 border-t border-zinc-900/50 flex flex-col items-center justify-center text-center relative z-10 w-full">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-red-600/10 via-transparent to-transparent blur-[80px] pointer-events-none"></div>
