@@ -1,4 +1,4 @@
-import { Download, Crosshair, Zap, Shield, Cpu, Activity, Terminal, Check, Target, Settings2, CloudLightning } from 'lucide-react';
+import { Download, Crosshair, Zap, Shield, Cpu, Activity, Terminal, Check, Target, Settings2, CloudLightning, Play, HelpCircle, Star, MessageSquare } from 'lucide-react';
 import { useState } from 'react';
 import { motion } from 'motion/react';
 
@@ -218,6 +218,109 @@ export default function App() {
           </div>
         </section>
 
+        {/* 1. Video Showcase / Demo */}
+        <section id="showcase" className="py-24 border-t border-zinc-900/50 relative z-10 w-full">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-black mb-4 tracking-tight">SEE IT IN <span className="text-red-500">ACTION</span></h2>
+            <p className="text-zinc-400 text-lg max-w-2xl mx-auto font-light leading-relaxed">Watch how Franxx Macro perfectly times every block.</p>
+          </div>
+          <div className="max-w-4xl mx-auto rounded-3xl border border-zinc-800 relative overflow-hidden transition-colors hover:border-red-900/50 shadow-2xl bg-black">
+            <video 
+              src="/demo.mp4" 
+              className="w-full aspect-video object-cover"
+              controls
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
+          </div>
+        </section>
+
+        {/* 2. Setup Guide (How it Works) */}
+        <section id="setup" className="py-24 border-t border-zinc-900/50 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-black mb-4 tracking-tight">HOW TO <span className="text-red-500">SETUP</span></h2>
+            <p className="text-zinc-400 text-lg max-w-2xl mx-auto font-light leading-relaxed">Get ready to dominate in three simple steps.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="bg-zinc-950/50 border border-zinc-900 p-8 rounded-3xl relative overflow-hidden transition-colors hover:border-red-900/50">
+              <div className="absolute -top-6 -left-6 text-7xl font-black text-red-500/10 z-0 select-none">01</div>
+              <h3 className="text-xl font-bold mb-3 text-white tracking-wide relative z-10">Download & Extract</h3>
+              <p className="text-zinc-400 relative z-10 font-light leading-relaxed">Download the latest version of Franxx Macro and extract it to a folder on your desktop.</p>
+            </div>
+            <div className="bg-zinc-950/50 border border-zinc-900 p-8 rounded-3xl relative overflow-hidden transition-colors hover:border-red-900/50">
+              <div className="absolute -top-6 -left-6 text-7xl font-black text-red-500/10 z-0 flex select-none">02</div>
+              <h3 className="text-xl font-bold mb-3 text-white tracking-wide relative z-10">Configure Settings</h3>
+              <p className="text-zinc-400 relative z-10 font-light leading-relaxed">Open the tool, adjust the CPS and set your keybinds in the config.</p>
+            </div>
+            <div className="bg-zinc-950/50 border border-zinc-900 p-8 rounded-3xl relative overflow-hidden transition-colors hover:border-red-900/50">
+              <div className="absolute -top-6 -left-6 text-7xl font-black text-red-500/10 z-0 flex select-none">03</div>
+              <h3 className="text-xl font-bold mb-3 text-white tracking-wide relative z-10">Run & Play</h3>
+              <p className="text-zinc-400 relative z-10 font-light leading-relaxed">Press the hotkey that you set up while in-game and let the Franxx do the rest.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* 3. Testimonials */}
+        <section id="reviews" className="py-24 border-t border-zinc-900/50 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-black mb-4 tracking-tight">COMMUNITY <span className="text-red-500">FEEDBACK</span></h2>
+            <p className="text-zinc-400 text-lg max-w-2xl mx-auto font-light leading-relaxed">Join thousands of satisfied players.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto gap-6">
+            <div className="bg-zinc-950/50 border border-zinc-900 p-8 rounded-3xl transition-colors hover:border-zinc-700">
+              <div className="flex text-red-500 mb-6 gap-1">
+                <Star className="w-5 h-5 fill-current"/>
+                <Star className="w-5 h-5 fill-current"/>
+                <Star className="w-5 h-5 fill-current"/>
+                <Star className="w-5 h-5 fill-current"/>
+                <Star className="w-5 h-5 fill-current"/>
+              </div>
+              <p className="text-zinc-300 italic mb-6 leading-relaxed">"Absolutely insane reaction times. I went on a 20-win streak the first day I used it. Hands down the best external out there."</p>
+              <div className="text-sm font-bold text-zinc-500 uppercase tracking-widest">- xXxSlayerxXx</div>
+            </div>
+            <div className="bg-zinc-950/50 border border-zinc-900 p-8 rounded-3xl transition-colors hover:border-zinc-700">
+               <div className="flex text-red-500 mb-6 gap-1">
+                <Star className="w-5 h-5 fill-current"/>
+                <Star className="w-5 h-5 fill-current"/>
+                <Star className="w-5 h-5 fill-current"/>
+                <Star className="w-5 h-5 fill-current"/>
+                <Star className="w-5 h-5 fill-current"/>
+              </div>
+              <p className="text-zinc-300 italic mb-6 leading-relaxed">"Zero lag on my PC. The setup was super quick and it never misses a clash. Totally safe since it doesn't touch memory."</p>
+              <div className="text-sm font-bold text-zinc-500 uppercase tracking-widest">- ツᴀɴᴅʀᴇღ </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 4. FAQ */}
+        <section id="faq" className="py-24 border-t border-zinc-900/50 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-black mb-4 tracking-tight">FREQUENTLY ASKED <span className="text-red-500">QUESTIONS</span></h2>
+          </div>
+          <div className="max-w-3xl mx-auto space-y-4">
+            <div className="bg-zinc-950/30 border border-zinc-900 p-8 rounded-3xl">
+              <h3 className="font-bold text-xl text-white mb-3 flex items-center gap-3">
+                <HelpCircle className="w-6 h-6 text-red-500"/> Is this safe to use?
+              </h3>
+              <p className="text-zinc-400 pl-9 font-light leading-relaxed">Yes, Franxx Macro is 100% external. It only simulates mouse/keyboard inputs. It does not modify game memory.</p>
+            </div>
+            <div className="bg-zinc-950/30 border border-zinc-900 p-8 rounded-3xl">
+              <h3 className="font-bold text-xl text-white mb-3 flex items-center gap-3">
+                <HelpCircle className="w-6 h-6 text-red-500"/> Do I need a powerful PC?
+              </h3>
+              <p className="text-zinc-400 pl-9 font-light leading-relaxed">No, our code is highly optimized. It uses minimal CPU and RAM, ensuring your in-game FPS stays as high as possible.</p>
+            </div>
+             <div className="bg-zinc-950/30 border border-zinc-900 p-8 rounded-3xl">
+              <h3 className="font-bold text-xl text-white mb-3 flex items-center gap-3">
+                <HelpCircle className="w-6 h-6 text-red-500"/> Which games are supported?
+              </h3>
+              <p className="text-zinc-400 pl-9 font-light leading-relaxed">We officially support Blade Ball, but you can use in any other game you play.</p>
+            </div>
+          </div>
+        </section>
+
           {/* Content Section: Updates */}
         <section id="updates" className="py-24 border-t border-zinc-900/50 relative z-10">
           <div className="text-center mb-16">
@@ -324,7 +427,7 @@ export default function App() {
               {isDownloading ? 'INITIATING...' : 'GET FRANXX MACRO'}
             </button>
             <a 
-              href="https://discord.gg/https://discord.gg/HYpA5bEjrZ" 
+              href="https://discord.gg/HYpA5bEjrZ" 
               target="_blank" 
               rel="noopener noreferrer"
               className="group bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 hover:border-[#5865F2]/50 hover:bg-[#5865F2]/10 text-white text-xl font-bold px-12 py-5 rounded-2xl transition-all shadow-[0_0_30px_rgba(0,0,0,0.5)] hover:shadow-[0_0_30px_rgba(88,101,242,0.15)] flex items-center justify-center gap-4 w-full sm:w-auto"
