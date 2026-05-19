@@ -222,11 +222,11 @@ export default function App() {
         <section id="showcase" className="py-24 border-t border-zinc-900/50 relative z-10 w-full">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black mb-4 tracking-tight">SEE IT IN <span className="text-red-500">ACTION</span></h2>
-            <p className="text-zinc-400 text-lg max-w-2xl mx-auto font-light leading-relaxed">Watch how Franxx Macro perfectly times every block.</p>
+            <p className="text-zinc-400 text-lg max-w-2xl mx-auto font-light leading-relaxed">Watch how Franxx Macro works in game.</p>
           </div>
           <div className="max-w-4xl mx-auto rounded-3xl border border-zinc-800 relative overflow-hidden transition-colors hover:border-red-900/50 shadow-2xl bg-black">
             <iframe 
-              src="https://www.youtube.com/embed/c-0L2RCJTGY?si=P4621euoIlffzlrO?autoplay=1&mute=1&loop=1&playlist=c-0L2RCJTGY&controls=0&disablekb=1&modestbranding=1&playsinline=1"
+              src="https://www.youtube.com/embed/c-0L2RCJTGY?si=P4621euoIlffzlrO&autoplay=1&mute=1&loop=1&playlist=c-0L2RCJTGY&controls=0&disablekb=1&modestbranding=1&playsinline=1"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
