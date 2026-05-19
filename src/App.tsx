@@ -226,7 +226,7 @@ export default function App() {
           </div>
           <div className="max-w-4xl mx-auto rounded-3xl border border-zinc-800 relative overflow-hidden transition-colors hover:border-red-900/50 shadow-2xl bg-black">
             <iframe 
-              src="https://www.youtube.com/watch?v=c-0L2RCJTGY"
+              src="https://www.youtube.com/embed/c-0L2RCJTGY?si=P4621euoIlffzlrO"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
