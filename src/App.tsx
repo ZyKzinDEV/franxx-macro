@@ -2,6 +2,13 @@ import { Download, Crosshair, Zap, Shield, Cpu, Activity, Terminal, Check, Targe
 import { useState } from 'react';
 import { motion } from 'motion/react';
 
+const DiscordIcon = ({ className }: { className?: string }) => (
+  <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className={className}>
+    <title>Discord</title>
+    <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z" fill="currentColor"/>
+  </svg>
+);
+
 export default function App() {
   const [isDownloading, setIsDownloading] = useState(false);
 
@@ -11,8 +18,8 @@ export default function App() {
       setIsDownloading(false);
       
       const a = document.createElement("a");
-      a.href = "./franxx-macrov2.zip";
-      a.download = "franxx-macrov2.zip";
+      a.href = "./franxx-macro.zip";
+      a.download = "franxx-macro.zip";
       document.body.appendChild(a);
       a.click();
       
@@ -109,19 +116,30 @@ export default function App() {
               transition={{ delay: 0.3 }}
               className="flex flex-col items-start gap-4"
             >
-              <button 
-                onClick={handleDownload}
-                disabled={isDownloading}
-                className="group relative bg-red-600 hover:bg-red-500 text-white text-xl font-bold px-10 py-5 rounded-2xl transition-all shadow-[0_0_30px_rgba(220,38,38,0.2)] hover:shadow-[0_0_50px_rgba(220,38,38,0.4)] flex items-center justify-center gap-4 w-full sm:w-auto disabled:opacity-75 disabled:cursor-wait"
-              >
-                {isDownloading ? (
-                  <div className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                ) : (
-                  <Download className="w-6 h-6 group-hover:-translate-y-1 transition-transform" />
-                )}
-                {isDownloading ? 'INITIATING...' : 'DOWNLOAD NOW'}
-              </button>
-              <p className="text-sm text-zinc-600 font-medium px-2 tracking-wide uppercase">
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                <button 
+                  onClick={handleDownload}
+                  disabled={isDownloading}
+                  className="group relative bg-red-600 hover:bg-red-500 text-white text-xl font-bold px-10 py-5 rounded-2xl transition-all shadow-[0_0_30px_rgba(220,38,38,0.2)] hover:shadow-[0_0_50px_rgba(220,38,38,0.4)] flex items-center justify-center gap-4 w-full sm:w-auto disabled:opacity-75 disabled:cursor-wait"
+                >
+                  {isDownloading ? (
+                    <div className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                  ) : (
+                    <Download className="w-6 h-6 group-hover:-translate-y-1 transition-transform" />
+                  )}
+                  {isDownloading ? 'INITIATING...' : 'DOWNLOAD NOW'}
+                </button>
+                <a 
+                  href="https://discord.gg/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="group relative bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 hover:border-[#5865F2]/50 hover:bg-[#5865F2]/10 text-white text-xl font-bold px-10 py-5 rounded-2xl transition-all shadow-[0_0_30px_rgba(0,0,0,0.5)] hover:shadow-[0_0_30px_rgba(88,101,242,0.15)] flex items-center justify-center gap-4 w-full sm:w-auto"
+                >
+                  <DiscordIcon className="w-6 h-6 text-[#5865F2] group-hover:-translate-y-1 transition-transform" />
+                  JOIN DISCORD
+                </a>
+              </div>
+              <p className="text-sm text-zinc-600 font-medium px-2 tracking-wide uppercase mt-2">
                 Windows 10/11 x64 Only
               </p>
             </motion.div>
@@ -200,7 +218,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Content Section: Updates */}
+          {/* Content Section: Updates */}
         <section id="updates" className="py-24 border-t border-zinc-900/50 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black mb-4 tracking-tight">LATEST <span className="text-red-500">UPDATES</span></h2>
@@ -284,6 +302,7 @@ export default function App() {
           </div>
         </section>
 
+
         {/* Content Section: Final CTA */}
         <section id="about" className="py-24 border-t border-zinc-900/50 flex flex-col items-center justify-center text-center relative z-10 w-full">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-800/10 via-transparent to-transparent blur-[80px] pointer-events-none"></div>
@@ -291,18 +310,29 @@ export default function App() {
           <p className="text-zinc-400 text-lg md:text-xl mb-10 max-w-2xl font-light leading-relaxed relative z-20">
             Join thousands of players already using Franxx Macro to secure their victories. Download now and experience true visual automation.
           </p>
-          <button 
-            onClick={handleDownload}
-            disabled={isDownloading}
-            className="relative z-20 group bg-red-600 hover:bg-red-500 text-white text-xl font-bold px-12 py-5 rounded-2xl transition-all shadow-[0_0_30px_rgba(220,38,38,0.2)] hover:shadow-[0_0_50px_rgba(220,38,38,0.4)] flex items-center justify-center gap-4 disabled:opacity-75 disabled:cursor-wait"
-          >
-            {isDownloading ? (
-              <div className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin" />
-            ) : (
-              <Download className="w-6 h-6 group-hover:-translate-y-1 transition-transform" />
-            )}
-            {isDownloading ? 'INITIATING...' : 'GET FRANXX MACRO'}
-          </button>
+          <div className="flex flex-col sm:flex-row gap-4 relative z-20">
+            <button 
+              onClick={handleDownload}
+              disabled={isDownloading}
+              className="group bg-red-600 hover:bg-red-500 text-white text-xl font-bold px-12 py-5 rounded-2xl transition-all shadow-[0_0_30px_rgba(220,38,38,0.2)] hover:shadow-[0_0_50px_rgba(220,38,38,0.4)] flex items-center justify-center gap-4 disabled:opacity-75 disabled:cursor-wait"
+            >
+              {isDownloading ? (
+                <div className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin" />
+              ) : (
+                <Download className="w-6 h-6 group-hover:-translate-y-1 transition-transform" />
+              )}
+              {isDownloading ? 'INITIATING...' : 'GET FRANXX MACRO'}
+            </button>
+            <a 
+              href="https://discord.gg/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 hover:border-[#5865F2]/50 hover:bg-[#5865F2]/10 text-white text-xl font-bold px-12 py-5 rounded-2xl transition-all shadow-[0_0_30px_rgba(0,0,0,0.5)] hover:shadow-[0_0_30px_rgba(88,101,242,0.15)] flex items-center justify-center gap-4 w-full sm:w-auto"
+            >
+              <DiscordIcon className="w-6 h-6 text-[#5865F2] group-hover:-translate-y-1 transition-transform" />
+              JOIN DISCORD
+            </a>
+          </div>
         </section>
 
         {/* Footer */}
