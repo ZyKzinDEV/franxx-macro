@@ -324,7 +324,7 @@ export default function App() {
               {isDownloading ? 'INITIATING...' : 'GET FRANXX MACRO'}
             </button>
             <a 
-              href="https://discord.gg/" 
+              href="https://discord.gg/https://discord.gg/HYpA5bEjrZ" 
               target="_blank" 
               rel="noopener noreferrer"
               className="group bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 hover:border-[#5865F2]/50 hover:bg-[#5865F2]/10 text-white text-xl font-bold px-12 py-5 rounded-2xl transition-all shadow-[0_0_30px_rgba(0,0,0,0.5)] hover:shadow-[0_0_30px_rgba(88,101,242,0.15)] flex items-center justify-center gap-4 w-full sm:w-auto"
@@ -343,7 +343,7 @@ export default function App() {
           </div>
           <p className="text-zinc-600 font-light">&copy; {new Date().getFullYear()} Franxx Macro. All rights reserved. Not affiliated with Roblox Corporation.</p>
           <div className="flex gap-8 text-zinc-600 font-medium tracking-wide">
-            <a href="https://discord.gg/" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors flex items-center gap-1">
+            <a href="https://discord.gg/HYpA5bEjrZ" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors flex items-center gap-1">
               DISCORD
             </a>
             <a href="#" className="hover:text-red-500 transition-colors">TERMS OF SERVICE</a>
