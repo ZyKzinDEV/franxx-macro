@@ -220,12 +220,16 @@ export default function App() {
               </div>
               <ul className="space-y-3 text-zinc-400 font-light mt-6">
                 <li className="flex gap-3">
-                  <Check className="w-5 h-5 text-zinc-600 shrink-0 mt-0.5" />
-                  <span>Minor bug fixes and UI improvements in the main dashboard.</span>
+                  <Check className="w-5 h-5 text-zinc-500 shrink-0 mt-0.5" />
+                  <span>New simplified UI</span>
                 </li>
                 <li className="flex gap-3">
-                  <Check className="w-5 h-5 text-zinc-600 shrink-0 mt-0.5" />
-                  <span>Click delay fixed</span>
+                  <Check className="w-5 h-5 text-zinc-500 shrink-0 mt-0.5" />
+                  <span>General optimization</span>
+                </li>
+                  <li className="flex gap-3">
+                  <Check className="w-5 h-5 text-zinc-500 shrink-0 mt-0.5" />
+                  <span>New Export/Import feature</span>
                 </li>
               </ul>
             </div>
@@ -242,15 +246,15 @@ export default function App() {
               <ul className="space-y-3 text-zinc-400 font-light mt-6">
                 <li className="flex gap-3">
                   <Check className="w-5 h-5 text-zinc-500 shrink-0 mt-0.5" />
-                  <span>New simplified UI</span>
+                  <span>Official Launch</span>
                 </li>
                 <li className="flex gap-3">
                   <Check className="w-5 h-5 text-zinc-500 shrink-0 mt-0.5" />
-                  <span>General optimization</span>
+                  <span>Fix crashes and lagging</span>
                 </li>
                   <li className="flex gap-3">
                   <Check className="w-5 h-5 text-zinc-500 shrink-0 mt-0.5" />
-                  <span>New Export/Import feature</span>
+                  <span>Significantly improved macro performance.</span>
                 </li>
               </ul>
             </div>
