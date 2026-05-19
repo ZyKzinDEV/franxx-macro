@@ -231,7 +231,7 @@ export default function App() {
             </div>
             {/* Update Item 1 */}
             <div className="bg-zinc-950/50 border border-zinc-900 p-6 sm:p-8 rounded-3xl relative overflow-hidden transition-colors hover:border-red-900/50">
-              <div className="absolute top-0 left-0 w-1 h-full bg-red-500"></div>
+              <div className="absolute top-0 left-0 w-1 h-full bg-zinc-700"></div>
               <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-4">
                 <div className="flex items-center gap-3">
                   <Terminal className="w-5 h-5 text-red-500" />
