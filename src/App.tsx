@@ -242,15 +242,15 @@ export default function App() {
               <ul className="space-y-3 text-zinc-400 font-light mt-6">
                 <li className="flex gap-3">
                   <Check className="w-5 h-5 text-zinc-500 shrink-0 mt-0.5" />
-                  <span>Official Launch</span>
+                  <span>New simplified UI</span>
                 </li>
                 <li className="flex gap-3">
                   <Check className="w-5 h-5 text-zinc-500 shrink-0 mt-0.5" />
-                  <span>Fix crashes and lagging</span>
+                  <span>General optimization</span>
                 </li>
                   <li className="flex gap-3">
                   <Check className="w-5 h-5 text-zinc-500 shrink-0 mt-0.5" />
-                  <span>Significantly improved macro performance.</span>
+                  <span>New Export/Import feature</span>
                 </li>
               </ul>
             </div>
