@@ -208,7 +208,7 @@ export default function App() {
           </div>
 
           <div className="max-w-3xl mx-auto space-y-6">
-               {/* Update Item 1 */}
+                   {/* Update Item 1 */}
             <div className="bg-zinc-950/50 border border-zinc-900 p-6 sm:p-8 rounded-3xl relative overflow-hidden transition-colors hover:border-red-900/50">
               <div className="absolute top-0 left-0 w-1 h-full bg-red-500"></div>
               <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-4">
@@ -220,16 +220,12 @@ export default function App() {
               </div>
               <ul className="space-y-3 text-zinc-400 font-light mt-6">
                 <li className="flex gap-3">
-                  <Check className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
-                  <span>New UI</span>
+                  <Check className="w-5 h-5 text-zinc-600 shrink-0 mt-0.5" />
+                  <span>Minor bug fixes and UI improvements in the main dashboard.</span>
                 </li>
                 <li className="flex gap-3">
-                  <Check className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
-                  <span>General optimization/span>
-                </li>
-                  <li className="flex gap-3">
-                  <Check className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
-                  <span>New Export/Import profile feature</span>
+                  <Check className="w-5 h-5 text-zinc-600 shrink-0 mt-0.5" />
+                  <span>Click delay fixed</span>
                 </li>
               </ul>
             </div>
