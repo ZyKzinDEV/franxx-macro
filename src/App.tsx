@@ -208,6 +208,31 @@ export default function App() {
           </div>
 
           <div className="max-w-3xl mx-auto space-y-6">
+               {/* Update Item 1 */}
+            <div className="bg-zinc-950/50 border border-zinc-900 p-6 sm:p-8 rounded-3xl relative overflow-hidden transition-colors hover:border-red-900/50">
+              <div className="absolute top-0 left-0 w-1 h-full bg-red-500"></div>
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-4">
+                <div className="flex items-center gap-3">
+                  <Terminal className="w-5 h-5 text-red-500" />
+                  <h3 className="text-xl font-bold text-white tracking-wide">Version 2.0.0</h3>
+                </div>
+                <span className="text-sm font-medium px-3 py-1 bg-red-950/30 text-red-400 rounded-full border border-red-500/20 max-w-fit">May 19, 2026</span>
+              </div>
+              <ul className="space-y-3 text-zinc-400 font-light mt-6">
+                <li className="flex gap-3">
+                  <Check className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
+                  <span>New UI</span>
+                </li>
+                <li className="flex gap-3">
+                  <Check className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
+                  <span>General optimization/span>
+                </li>
+                  <li className="flex gap-3">
+                  <Check className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
+                  <span>New Export/Import profile feature</span>
+                </li>
+              </ul>
+            </div>
             {/* Update Item 1 */}
             <div className="bg-zinc-950/50 border border-zinc-900 p-6 sm:p-8 rounded-3xl relative overflow-hidden transition-colors hover:border-red-900/50">
               <div className="absolute top-0 left-0 w-1 h-full bg-red-500"></div>
