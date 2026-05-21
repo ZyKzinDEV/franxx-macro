@@ -1,5 +1,5 @@
 import { Download, Crosshair, Zap, Shield, Cpu, Activity, Terminal, Check, Target, Settings2, CloudLightning, Play, HelpCircle, Star, MessageSquare } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 
 const DiscordIcon = ({ className }: { className?: string }) => (
@@ -11,15 +11,29 @@ const DiscordIcon = ({ className }: { className?: string }) => (
 
 export default function App() {
   const [isDownloading, setIsDownloading] = useState(false);
+  const [downloadCount, setDownloadCount] = useState<number | null>(null);
+
+  useEffect(() => {
+    fetch('/api/downloads')
+      .then(res => res.json())
+      .then(data => setDownloadCount(data.count))
+      .catch(console.error);
+  }, []);
 
   const handleDownload = () => {
     setIsDownloading(true);
+    
+    fetch('/api/downloads', { method: 'POST' })
+      .then(res => res.json())
+      .then(data => setDownloadCount(data.count))
+      .catch(console.error);
+
     setTimeout(() => {
       setIsDownloading(false);
       
       const a = document.createElement("a");
-      a.href = "./franxx-macrov2.zip";
-      a.download = "franxx-macrov2.zip";
+      a.href = "./franxx-macro.zip";
+      a.download = "franxx-macro.zip";
       document.body.appendChild(a);
       a.click();
       
@@ -142,6 +156,17 @@ export default function App() {
               <p className="text-sm text-zinc-600 font-medium px-2 tracking-wide uppercase mt-2">
                 Windows 10/11 x64 Only
               </p>
+              {downloadCount !== null && (
+                <div className="mt-4 flex items-center gap-3 bg-red-950/40 border border-red-500/30 px-5 py-2.5 rounded-2xl shadow-[0_0_15px_rgba(239,68,68,0.15)] relative overflow-hidden group">
+                  <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                  <div className="bg-red-500/20 text-red-500 rounded-lg p-1.5 flex items-center justify-center">
+                    <Download className="w-4 h-4" />
+                  </div>
+                  <span className="text-white font-bold text-lg tracking-wide">
+                    {downloadCount.toLocaleString()} <span className="text-red-500 font-medium text-sm ml-1 uppercase">Downloads</span>
+                  </span>
+                </div>
+              )}
             </motion.div>
           </div>
 
@@ -435,6 +460,17 @@ export default function App() {
               JOIN DISCORD
             </a>
           </div>
+          {downloadCount !== null && (
+            <div className="mt-8 flex items-center gap-3 bg-red-950/40 border border-red-500/30 px-6 py-3 rounded-2xl shadow-[0_0_20px_rgba(239,68,68,0.2)] relative overflow-hidden group z-20">
+              <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+              <div className="bg-red-500/20 text-red-500 rounded-xl p-2 flex items-center justify-center animate-pulse">
+                <Download className="w-5 h-5" />
+              </div>
+              <span className="text-white font-bold text-2xl tracking-wide">
+                {downloadCount.toLocaleString()} <span className="text-red-500 font-medium text-base ml-1 uppercase tracking-widest">Total Downloads</span>
+              </span>
+            </div>
+          )}
         </section>
 
         {/* Footer */}
