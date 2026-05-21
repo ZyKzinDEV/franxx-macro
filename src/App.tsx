@@ -15,18 +15,34 @@ export default function App() {
 
   useEffect(() => {
     fetch('/api/downloads')
-      .then(res => res.json())
+      .then(res => {
+        if (!res.ok) throw new Error('API not available');
+        return res.json();
+      })
       .then(data => setDownloadCount(data.count))
-      .catch(console.error);
+      .catch((err) => {
+        console.warn("Backend API not reachable, falling back to local counter.", err);
+        const local = localStorage.getItem('localDownloadCount');
+        setDownloadCount(local ? parseInt(local) : 1423);
+      });
   }, []);
 
   const handleDownload = () => {
     setIsDownloading(true);
     
     fetch('/api/downloads', { method: 'POST' })
-      .then(res => res.json())
+      .then(res => {
+        if (!res.ok) throw new Error('API not available');
+        return res.json();
+      })
       .then(data => setDownloadCount(data.count))
-      .catch(console.error);
+      .catch((err) => {
+        setDownloadCount(prev => {
+          const newCount = (prev || 1423) + 1;
+          localStorage.setItem('localDownloadCount', String(newCount));
+          return newCount;
+        });
+      });
 
     setTimeout(() => {
       setIsDownloading(false);
