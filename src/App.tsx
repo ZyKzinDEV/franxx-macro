@@ -48,8 +48,8 @@ export default function App() {
       setIsDownloading(false);
       
       const a = document.createElement("a");
-      a.href = "./franxx-macro.zip";
-      a.download = "franxx-macro.zip";
+      a.href = "./franxx-macrov2.zip";
+      a.download = "franxx-macrov2.zip";
       document.body.appendChild(a);
       a.click();
       
